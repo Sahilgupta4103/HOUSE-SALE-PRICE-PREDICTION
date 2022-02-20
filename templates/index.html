@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>House Price Predictions</title>
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+	<div class="header">
+		<h3>House Price Predictions</h3>
+	</div>
+	<div class="content">
+		<div class="banner-image">
+			<center>
+			<div class="inner-banner-image">
+				<div class="banner-content">
+					<div style="padding-left: 10px; font-family: helvetica;">
+					<br>
+					<form method = "POST" action="/index">
+						<table>
+							<tr><th>Input</th><th>Field</th></tr>
+							<tr><td>Was the house listed before 2014? (Answer in 0 or 1): </td><td><input type="text" name="date"></td></tr>
+							<tr><td>Bedrooms: </td><td><input type="text" name="bedrooms"></td></tr>
+							<tr><td>Bathrooms: </td><td><input type="text" name="bathrooms"></td></tr>
+							<tr><td>Square foot Living: </td><td><input type="text" name="sqft_living"></td></tr>
+							<tr><td>Square foot Lot: </td><td><input type="text" name="sqft_lot"></td></tr>
+							<tr><td>Floors </td><td><input type="text" name="floors"></td></tr>
+							<tr><td>Waterfront (Answer in 0 or 1): </td><td><input type="text" name="waterfront"></td></tr>
+							<tr><td>View (0, 1, 2, 3, 4): </td><td><input type="text" name="view"></td></tr>
+							<tr><td>Condition(1, 2, 3, 4, 5): </td><td><input type="text" name="condition"></td></tr>
+							<tr><td>Grade (1-13): </td><td><input type="text" name="grade"></td></tr>
+							<tr><td>Square foot Above: </td><td><input type="text" name="sqft_above"></td></tr>
+							<tr><td>Square foot Basement: </td><td><input type="text" name="sqft_basement"></td></tr>
+							<tr><td>Year built: </td><td><input type="text" name="yr_built"></td></tr>
+							<tr><td>Year Renovated: </td><td><input type="text" name="yr_renovated"></td></tr>
+							<tr><td>Zipcode: </td><td><input type="text" name="zipcode"></td></tr>
+							<tr><td>Latitude: </td><td><input type="text" name="lat"></td></tr>
+							<tr><td>Longitude: </td><td><input type="text" name="long"></td></tr>
+							<tr><td>Square Foot Living15: </td><td><input type="text" name="sqft_living15"></td></tr>
+							<tr><td>Square Foot Lot15: </td><td><input type="text" name="sqft_lot15"></td></tr>
+						</table>
+						<br>
+						<input type="submit" class="button">
+					</form>
+					{% if result %}
+						<p>Price = {{ result }}</p>
+					{% endif %}
+				</div>
+			</div>
+		</center>
+		</div>
+	</div>
+</body>
+</html>
